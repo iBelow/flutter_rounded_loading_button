@@ -1,3 +1,7 @@
+## [2.1.1]
+* bump version rxdart
+* removed obsolete code(```unawaited```)
+
 ## [2.1.0]
 * Fixed issues related to late initialisation in the controller (Programmatically stop and start fails #47)
 * Added safety against bad state errors (Unhandled Exception: Bad state: Cannot add new events after calling close #48)

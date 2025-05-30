@@ -328,8 +328,9 @@ class RoundedLoadingButtonState extends State<RoundedLoadingButton>
     if (widget.resetAfterDuration) await Future.delayed(widget.resetDuration);
     if (!mounted) return;
     _state.sink.add(ButtonState.idle);
-    unawaited(_buttonController.reverse());
-    unawaited(_borderController.reverse());
+    // Replace unawaited with a more compatible approach
+    _buttonController.reverse().then((_) {});
+    _borderController.reverse().then((_) {});
     _checkButtonController.reset();
   }
 }
